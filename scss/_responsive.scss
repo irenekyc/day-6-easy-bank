@@ -1,0 +1,51 @@
+@mixin MOBILENAVBAR {
+    nav{
+        padding: 1rem 5%;
+
+        i{
+            font-size:1.2rem;
+            color:black;
+            font-weight:100;
+            cursor: pointer;
+        }
+        .menu-btn{
+            cursor: pointer;
+        }
+
+        .hide-sm{
+            display:none;
+        }
+        .hide-originally{
+            display:none;
+        }
+
+        .show-menu{
+            border-radius:12px;
+            padding: 2rem;
+            background: white;
+            text-align: center;
+            display:block;
+            width: 90%;
+            position: fixed;
+            top:90px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            li{
+                margin-bottom: 1.5rem;
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+
+        }
+
+    }
+}
+
+@media (max-width:767px){
+    @include MOBILENAVBAR;
+    .wrapper{
+        padding: 0 8%;
+    }
+}

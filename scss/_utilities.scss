@@ -1,0 +1,58 @@
+@mixin ALIGNCENTER{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+//TEXT
+.heading-text{
+    color: $primary-blue;
+}
+
+.x-large{
+    font-size:2.5rem;
+    font-weight:300;
+}
+.large{
+    font-size:1.5rem;
+    font-weight: 300;
+}
+
+.title{
+    font-size:1.2rem;
+}
+
+.lh-2{
+    line-height:2;
+}
+
+.lead{
+    text-align:justify;
+}
+
+//BUTTON
+.btn{
+    padding: 12px 20px;
+    width:150px;
+    border-radius:25px;
+    cursor: pointer;
+    @include ALIGNCENTER;
+    &.btn-primary{
+        background: linear-gradient(to left, $primary-lime, $primary-cyan);
+        color:white;
+
+        &:hover{
+            filter: brightness(120%)
+        }
+    }
+}
+
+
+// LAYOUT
+@for $i from 1 through 5{
+    .py-#{$i} { padding: 1rem*$i 0;}
+}
+
+@for $i from 1 through 5{
+    .my-#{$i} { margin: 1rem*$i 0;}
+}
+

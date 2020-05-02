@@ -1,0 +1,105 @@
+@import 'variables';
+@import 'utilities';
+
+body{
+    background: $main-lighter;
+    color: $main-color;
+    font-family: $main-font;
+    position:relative;
+    font-size:12px;
+    text-align: center;
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: $main-color;
+     &:hover{
+         color: $primary-lime;
+     }
+}
+
+li{
+    list-style:none;
+}
+
+/////////////// NAV ///////////////////
+nav{
+    background: white;
+    display:flex;
+    justify-content: space-between;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+////////HERO/////////////////////////
+.hero{
+    text-align:center;
+    background:white;
+    &-pic{
+        background: url('../images/bg-intro-mobile.svg') no-repeat;
+        img{width:100%;}
+    }
+  &-intro{
+      width:90%;
+      @include ALIGNCENTER;
+  }
+    
+}
+
+///FEATURES
+.features{
+    background: $main-light;
+}
+
+//Blogs
+.blog-card{
+    text-align: left;
+    background: white;
+    border-radius: 5px;
+    img{
+        width:100%;
+        border-radius: 5px 5px 0 0;
+    }
+    &-details{
+        padding: 1rem 1rem;
+    }
+}
+
+//Footer
+.footer{
+    background: $primary-blue;
+    a{
+        color:white;
+        &:hover{
+            color: $primary-cyan;
+        }
+    }
+
+    .social-media{
+        display:flex;
+        @include ALIGNCENTER;
+        width:200px;
+        justify-content: space-between;
+    }
+    &-nav{
+        li{
+            margin-bottom: 1.5rem;
+        }
+      
+
+    }
+
+    
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import 'responsive';
