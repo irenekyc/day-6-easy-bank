@@ -8,6 +8,8 @@ body{
     position:relative;
     font-size:12px;
     text-align: center;
+    overflow-x: hidden;
+    width:100vw;
 }
 
 *{
@@ -28,15 +30,19 @@ li{
     list-style:none;
 }
 
+
 /////////////// NAV ///////////////////
 nav{
     background: white;
     display:flex;
     justify-content: space-between;
     position:fixed;
-    width:100%;
+    width:100vw;
     top:0;
     left:0;
+    z-index:10;
+    padding:1rem 5%;
+
 }
 
 ////////HERO/////////////////////////
@@ -57,16 +63,23 @@ nav{
 ///FEATURES
 .features{
     background: $main-light;
+    .feature{
+        height:270px;
+       img{flex:1;
+        }
+    }
 }
 
 //Blogs
 .blog-card{
+    
     text-align: left;
     background: white;
     border-radius: 5px;
     img{
         width:100%;
         border-radius: 5px 5px 0 0;
+        height:200px;
     }
     &-details{
         padding: 1rem 1rem;

@@ -1,6 +1,5 @@
 @mixin MOBILENAVBAR {
     nav{
-        padding: 1rem 5%;
 
         i{
             font-size:1.2rem;
@@ -37,15 +36,164 @@
                     margin-bottom:0;
                 }
             }
-
         }
-
     }
 }
 
-@media (max-width:767px){
+@mixin NAVBAR{
+    nav{
+        height:70px;
+        .nav-link{
+           width:330px;
+           @include ALIGNCENTER;
+
+           a{
+               color: $main-color;
+               &:hover{
+                   color: $primary-blue;
+               }
+           }
+
+           li{
+               line-height: 70px;
+               position:relative;
+               padding: 0 5px;
+               &:hover:after{
+                   content: "";
+                   position: absolute;
+                   height:3px;
+                   width:100%;
+                   bottom:0px;
+                   left:0;
+                   background: linear-gradient(to left, $primary-lime, $primary-cyan)
+               }
+           }
+        }
+    }
+}
+
+@mixin FLEXBOX{
+    .flex-box{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@mixin HEROIPAD{
+    .hero{
+        flex-direction: row-reverse;
+        height:80vh;
+
+      
+        &-pic{
+           flex:1.5;
+            height:100%;
+            background: url('../images/bg-intro-desktop.svg');
+            position:relative;
+
+            img{
+                position:absolute;
+                right:-80%;
+                top:0;
+                height:90vh;
+                width:auto;
+                z-index:2;
+            }
+        }
+        &-intro{
+            flex:1;
+            padding: 2rem;
+        }    
+    }
+}
+
+@mixin DESKTOPFOOTER{
+    .footer{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;;
+        height:175px;
+        padding: 0 12%;
+
+
+
+        &-nav{
+            
+            display:flex;
+           width:20%;
+            justify-content: space-between;
+            
+        }
+    }
+}
+
+@media (max-width:766px){
     @include MOBILENAVBAR;
     .wrapper{
         padding: 0 8%;
+    }
+
+}
+
+
+@media (min-width:767px){
+    .wrapper{
+        padding: 0 12%;
+    }
+    .show-sm,
+    .hide-originally{
+        display:none;
+    }
+    @include FLEXBOX;
+    @include NAVBAR;
+    @include HEROIPAD;
+    .features, 
+    .blog{
+        .flex-box{
+            flex-wrap:wrap;
+        }
+    }
+    .blog-card, .feature{
+        width:45%;
+    }
+}
+
+@media (min-width:1024px){
+    .hero-pic{
+        img{
+            right:-20%;
+        }
+    }
+    .features{
+        text-align:left;
+    }
+    @include DESKTOPFOOTER;
+
+
+}
+@media (min-width:1200px){
+
+    .blog-card, .feature{
+        width:22%;
+    }
+    .blog-card{
+        height:415px;
+        .lh-2{
+            line-height:1.5;
+        
+        }
+    }
+    
+    .hero-pic{
+        img{
+            right:-10%;
+        }
+    }
+    .large{
+        font-size:1.8rem;
+    }
+    .x-large{
+        font-size:3.5rem;
     }
 }

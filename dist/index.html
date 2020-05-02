@@ -13,11 +13,12 @@
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
 <body>
-  <nav> 
+  <nav class="flex-box">
     <img src="images/logo.svg">
     <img class="show-sm menu-btn" src="images/icon-hamburger.svg" id="open-modal">
-    <i class="hide-originally fas fa-times" id="close-modal"></i>
-    <ul class="hide-sm" id="mobile-menu"> 
+    <div class="hide-originally"><i class="fas fa-times" id="close-modal"></i></div>
+    
+    <ul class="nav-link hide-sm flex-box" id="mobile-menu"> 
       <li> <a href="#"> Home </a></li>
       <li> <a href="#"> About </a></li>
       <li> <a href="#"> Contact </a></li>
@@ -28,7 +29,7 @@
   </nav>
 
 
-<section class="hero ">
+<section class="hero flex-box">
   <div class="hero-pic">
     <img src="images/image-mockups.png">
   </div>
@@ -44,37 +45,47 @@
 
 <section class="features py-3">
   <div class="wrapper">
-    <h1 class="x-large heading-text my-1">Why choose Easybank? </h1>
+    <h1 class="large heading-text my-1">Why choose Easybank? </h1>
     <p class="lh-2 my-1">  We leverage Open Banking to turn your bank account into your financial hub. Control 
       your finances like never before.</p>
-    <div class="features-container flex py-2">
+    <div class="features-container flex-box py-2">
+  
 
       <div class="feature my-2">
-        <img src="images/icon-online.svg">
+        <img class="my-1" src="images/icon-online.svg">
+        <div>
         <p class="heading-text large my-1">  Online Banking</p>
         <p class="lead lh-2 my-1">Our modern web and mobile applications allow you to keep track of your finances 
           wherever you are in the world.</p>
+        </div>
       </div>
 
       <div class="feature my-2">
-        <img src="images/icon-budgeting.svg">
-        <p class="heading-text large my-1">  Simple Budgeting</p>
-        <p class="lead lh-2 my-1">See exactly where your money goes each month. Receive notifications when you’re 
-          close to hitting your limits.</p>
+        <img class="my-1" src="images/icon-budgeting.svg">
+        <div>
+          <p class="heading-text large my-1">  Simple Budgeting</p>
+          <p class="lead lh-2 my-1">See exactly where your money goes each month. Receive notifications when you’re 
+            close to hitting your limits.</p>
+        </div>
+       
       </div>
 
       <div class="feature my-2">
-        <img src="images/icon-onboarding.svg">
+        <img class="my-1" src="images/icon-onboarding.svg">
+        <div>
         <p class="heading-text large my-1">  Fast Onboarding</p>
         <p class="lead lh-2 my-1">We don’t do branches. Open your account in minutes online and start taking control 
           of your finances right away.</p>
       </div>
+    </div>
 
       <div class="feature my-2">
-        <img src="images/icon-api.svg">
+        <img class="my-1" src="images/icon-api.svg">
+        <div>
         <p class="heading-text large my-1"> Open API</p>
         <p class="lead lh-2 my-1"> Manage your savings, investments, pension, and much more from one account. Tracking 
-          your money has never been easier.</p>    
+          your money has never been easier.</p>   
+        </div> 
       </div>
     </div>  
   </div>
@@ -83,7 +94,7 @@
 <section class="blog py-3">
 <div class="wrapper">
   <h1 class="x-large heading-text">Latest Articles</h1>
-  <div class="blogs-container flex py-2">
+  <div class="blogs-container flex-box py-2">
 
     <div class="blog-card my-1">
       <img src="images/image-currency.jpg">
@@ -116,7 +127,7 @@
     </div>
 
     <div class="blog-card my-1">
-      <img src="images/image-plane.jpg">
+      <img src="images/image-confetti.jpg">
       <div class="blog-card-details">
       <p class="second my-1">   By Claire Robinson</p>
       <a href="/" class="title heading-text my-1"> Our invite-only Beta accounts are now live!</a>
@@ -130,6 +141,7 @@
 </section>
  
 <section class="footer py-3">
+  <div>
   <object class="my-1" type="image/svg+xml" data="images/white-logo.svg"></object>
   <div class="my-1 social-media">
     <a href="/"><img src="images/icon-facebook.svg"></a>
@@ -138,18 +150,27 @@
     <a href="/"><img src="images/icon-pinterest.svg"></a>
     <a href="/"><img src="images/icon-instagram.svg"></a>
   </div>
+</div>
   <div class="py-1 footer-nav">
-    <ul> 
+     
+      <div>
+
+      
       <li><a href="/">About Us</a></li>
       <li><a href="/">Contact</a></li>
       <li><a href="/">Blog</a></li>
+    </div>
+    <div>
       <li><a href="/">Careers</a></li>
+      <li><a href="/"> Support </a></li>
       <li><a href="/">Privacy Policy</a></li>
-    </ul>
+    </div>
+  
   </div>
+  <div>
   <div class="btn btn-primary"> Request Invite</div>
   <p class="my-1">  © Easybank. All Rights Reserved </p>
-
+</div>
 </section>
   
   <div class="attribution">
